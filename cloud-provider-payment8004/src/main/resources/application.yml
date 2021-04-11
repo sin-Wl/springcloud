@@ -5,7 +5,7 @@ server:
 #服务别名----注册zookeeper到注册中心名称
 spring:
   application:
-    name: cloud-provider-payment
+    name: cloud-provider-payment    #当前微服务的对外名称
   cloud:
     zookeeper:
       connect-string: 127.0.0.1:2181
