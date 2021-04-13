@@ -13,6 +13,14 @@ spring:
       #-和yml后缀系统自动配，所以创建配置文件名规范很重要
       uri: http://localhost:3344
 
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 #服务注册到eureka地址
 eureka:
   client:
