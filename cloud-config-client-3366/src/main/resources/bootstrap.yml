@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -13,8 +13,7 @@ spring:
       #-和yml后缀系统自动配，所以创建配置文件名规范很重要
       uri: http://localhost:3344
 
-
-#rabbitmq相关配置 15672是Web管理界面的端口；5672是MQ访问的端口<----------------------
+#rabbitmq相关配置 15672是Web管理界面的端口；5672是MQ访问的端口<-----------------------
 rabbitmq:
     host: localhost
     port: 5672
