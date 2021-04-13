@@ -1,0 +1,21 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master #分支名称
+      name: config #配置文件名称
+      profile: dev #读取后缀名称
+      #综上所述，结合起来就是读取master分支config-dev.yml的配置文件 得到地址:http://localhost:3344/master/config-dev.yml
+      #-和yml后缀系统自动配，所以创建配置文件名规范很重要
+      uri: http://localhost:3344
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+    #register-with-eureka: false
