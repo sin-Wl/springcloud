@@ -26,4 +26,26 @@ public class FlowLimitController {
         }
         return "------testB";
     }
+
+    @GetMapping("/testD")
+    public String testD() {
+/*        try {
+            TimeUnit.SECONDS.sleep(1);  //1s内处理完请求
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("testD 测试RT");
+        */
+/*        int a = 1/0;  // -->测试sentinel服务降级的 异常比例
+        log.info("testD 测试异常比例");*/
+        return "testD";
+    }
+
+    @GetMapping("/testE")
+    public String testE()
+    {
+        log.info("testE 测试异常数");
+        int age = 10/0;
+        return "------testE 测试异常数";
+    }
 }
